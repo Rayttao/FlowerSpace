@@ -1,0 +1,18 @@
+
+
+<canvas class = "canvas"  id="chart1"
+canvas-id="temperature"></canvas>
+
+
+<canvas class = "canvas"  id="chart2"
+canvas-id="humidity"></canvas>
+
+<canvas class = "canvas"  id="chart3"
+canvas-id="SoilMoisture"></canvas>
+
+<canvas class = "canvas" id="chart4"
+canvas-id="LightIntensity"></canvas>
+
+<canvas class = "canvas" id="chart5"
+canvas-id="TankWeight"></canvas>
+

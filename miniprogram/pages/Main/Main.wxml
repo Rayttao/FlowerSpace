@@ -1,0 +1,41 @@
+
+    <image class="images" src="/images/backg1.jpg"></image>
+      <view class="title">植物状态</view>
+      <view >
+            <view class="variate">
+            土壤湿度：{{SoilMoisture/10}}%
+            <view style="font-size:30rpx">(阈值：湿度50%以上)</view>
+            </view>
+            <view class="variate">
+            光照强度：{{LightIntensity}}
+            <view style="font-size:30rpx">(阈值：光照500以上)</view>
+            </view>
+            <view class="variate">
+            环境温度：{{Temperature}}℃
+            </view>
+            <view class="variate">
+            环境湿度：{{Humidity}}%
+            </view>
+      </view>
+
+      <view class="title" style="margin-top:20px">设备状态</view>
+      <view>
+            <view  class="variate">剩余水量：{{TankWeight}}kg</view>
+            <view  class="variate" style="font-size:40rpx">预计剩余水量使用时间：{{Days}}天</view>
+            <view wx:if="{{TankWeight<0.1}}"  class="variate">
+                  <icon  type="warn" size="30"></icon>
+                  储水量不足，请及时添加
+            </view>
+            <view  class="variate" wx:if="{{LightFlag==1}}">
+                  <icon  type="info" size="30"></icon>
+                  光照不足，已打开灯光
+                  <view class="variate">
+                  开灯后光照强度：{{LightIntensity1}}
+                  </view>
+            </view>
+            <view wx:if="{{LightFlag==0}}" class="variate">
+                  <icon  type="info" size="30"></icon>
+                  光照充足，未打开灯光</view>
+
+      </view>
+
